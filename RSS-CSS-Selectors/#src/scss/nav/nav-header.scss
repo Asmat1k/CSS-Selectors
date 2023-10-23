@@ -1,0 +1,171 @@
+.nav__header {
+  .nav-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 10px;
+    .nav-lvl-info {
+      display: flex;
+      align-items: center;
+
+      column-gap: 10px;
+      .nav__title {
+        font-size: 25px;
+        font-weight: 600;
+        color: #777
+      }
+      .nav-check {
+        position: relative;
+        display: inline-block;
+        margin-left: 8px;
+        width: 12px;
+        height: 20px;
+        opacity: 2;
+        border: solid 3px white;
+        border-width: 0 4px 4px 0;
+        opacity: .2;
+        top: -3px;
+        transform: rotate(40deg);
+      }
+      .nav-done {
+        border-color: green;
+        opacity: 1;
+      }
+    }
+    .nav__buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      column-gap: 20px;
+      .nav-lvl-change {
+        display: flex;
+        align-items: center;
+        position: relative;
+  
+        width: 43px;
+        height: 20px;
+        .nav-arrow {
+          position: absolute;
+          border: 2px solid white;
+          cursor: pointer;
+  
+          transform: rotate(-135deg);
+          border-color: white white transparent transparent;
+          opacity: .25;
+  
+          width: 18px;
+          height: 18px;
+          &:last-child {
+            right: 0;
+            transform: rotate(45deg);
+          }
+          &:hover {
+            opacity: .5;
+          }
+        }
+      }
+      .nav-burger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+
+        z-index: 4;
+
+        width: 27px;
+        height: 27px;
+        .burger-line {
+          position: absolute;
+
+          background-color: white;
+          opacity: .25;
+
+          height: 2px;
+          width: 100%;
+          transition: .3s;
+          &:first-child {
+            top: 3px;
+          }
+          &:last-child {
+            bottom: 3px;
+          }
+        }
+        .active {
+          background-color: rgb(129, 129, 129);
+          opacity: 1;
+          transition: .3s;
+          &:first-child {
+            top: 45%;
+            transform: rotate(-45deg);
+            opacity: 0;
+          }
+          &:nth-of-type(2) {
+            top: 45%;
+            transform: rotate(45deg);
+          }
+          &:last-child {
+            bottom: 45%;
+            transform: rotate(-45deg);
+          }
+        }
+        &:hover .burger-line {
+          opacity: .5;
+        }
+      }
+    }
+  }
+  .nav-progress {
+    background: rgba(0,0,0,.4);
+    .nav-progress-bar {
+      position: relative;
+      background: #ffffff33;
+      width: 10%;
+      height: 2px;
+      transition: .3s;
+      &::after {
+        content: "";
+        position: absolute;
+        right: -5px;
+        top: -1px;
+
+        border-radius: 5px;
+        background: #ffffff80;
+
+        height: 4px;
+        width: 4px;
+        transition: .3s;
+      }
+    }
+  }
+} 
+
+.done {
+  animation: done .9s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes done {
+  0%  { opacity: .4; border-color: green; }
+  25% { opacity: .6; border-color: green; transform: rotate(40deg) scale(0.9); }
+  50% { opacity: .8; border-color: green; transform: rotate(40deg) scale(1.1); }
+  75% { opacity: 1;  border-color: green; transform: rotate(40deg) scale(1.0); }
+  100% { opacity: 1; border-color: green; }
+}
+
+.help-done {
+  animation: helpDone .9s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes helpDone {
+  0%  { opacity: .4; border-color: yellow; }
+  25% { opacity: .6; border-color: yellow; transform: rotate(40deg) scale(0.9); }
+  50% { opacity: .8; border-color: yellow; transform: rotate(40deg) scale(1.1); }
+  75% { opacity: 1;  border-color: yellow; transform: rotate(40deg) scale(1.0); }
+  100% { opacity: 1; border-color: yellow; }
+}

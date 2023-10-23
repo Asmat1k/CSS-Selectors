@@ -1,0 +1,17 @@
+@import "nav-header";
+@import "nav-body";
+@import "nav-burger";
+
+.nav {
+  background-color: #221e18;  
+  width: 375px;
+  .nav-wrapper {
+    position: relative;
+
+    z-index: 1;
+    padding: 20px;
+    background: #00000033;
+    
+    height: 100%;
+  }
+}

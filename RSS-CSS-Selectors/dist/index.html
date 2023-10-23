@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>CSS-Selectors</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/arduino-light.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+	<script>
+		hljs.initHighlightingOnLoad();
+	</script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200;400;700&family=Inconsolata:wght@300;400;700&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=1050">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="page">
+			<section class="game">
+				<header class="game__header">
+					<div class="game__logo">
+						<plate>
+							<apple></apple>
+						</plate>
+						<h1 class="game__title">CSS Diner</h1>
+					</div>
+					<div class="game__share">
+						<h2 class="game__title">Share</h2>
+						<ul class="game__list">
+							<li class="game__item"><a href="mailto:dovrovti@mail.ru" class="game__link"><i class="gg-mail"></i></a></li>
+							<li class="game__item"><a href="https://ru-ru.facebook.com/" class="game__link"><i class="gg-facebook"></i></a></li>
+							<li class="game__item"><a href="https://twitter.com/?lang=ru" class="game__link"><i class="gg-twitter"></i></a></li>
+						</ul>
+					</div>
+				</header>
+				<h2 class="game__title-main">Select the plates</h2>
+				<div class="game-help">
+					<a href="#" class="game__button answer">Help, I'm stuck!</a>
+				</div>
+				<div class="game__body">
+					<div class="table-wrapper">
+						<div class="table-top"></div>
+						<div class="table">
+							<plate class="animated"></plate>
+							<plate class="animated"></plate>
+						</div>
+					</div>
+					<div class="table-edge">
+						<div class="table-leg"></div>
+						<div class="table-leg"></div>
+					</div>
+				</div>
+				<div class="game-editor">
+					<div class="editor-css">
+						<div class="editor-info">
+							<div class="editor__title">CSS Editor</div>
+							<div class="editor__subt">style.css</div>
+						</div>
+						<div class="editor-area">
+							<div class="editor__input-line-numbers">
+								1 <br> 2 <br> 3 <br> 4 <br> 5 <br> 6 <br>
+								7 <br> 8 <br> 9 <br> 10 <br>
+							</div>
+							<div class="editor-type-area">
+								<input type="text" class="editor__input blink" placeholder="Type in a CSS selector">
+								<pre><code class="editor-layer css"> </code></pre>
+								<div class="editor-enter">enter</div>
+								<div class="editor__text">
+									<pre>
+              <code class="editor-com css"> 
+.table {
+  display: inline-flex;
+  justify-content: space-around;
+}
+              </code>
+            </pre>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="editor-html">
+						<div class="editor-info">
+							<div class="editor__title">HTML Viewer</div>
+							<div class="editor__subt">table.html</div>
+						</div>
+						<div class="editor-area">
+							<div class="editor__input-line-numbers">
+								1 <br> 2 <br> 3 <br> 4 <br> 5 <br> 6 <br>
+								7 <br> 8 <br> 9 <br> 10 <br>
+							</div>
+							<div class="editor-html">
+								<div class="editor__text html-text">
+									<pre><code class="table-code html"></code></pre>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="game-end">
+					<div class="game-end__body">
+						<h2 class="game-end__title">You have passed the game!</h2>
+						<div class="game-end-check"></div>
+					</div>
+				</div>
+				<footer class="game__footer">
+					<div class="game-info">
+						<div class="game-dev">
+							<div>dev by <a href="https://github.com/Asmat1k" class="footer__link">@asmat1k</a></div>
+						</div>
+						<div class="game-course">
+							2023 | <a href="rs.school/js/" class="footer__link">RSSchool</a> | Stage 2
+						</div>
+					</div>
+				</footer>
+			</section>
+			<aside class="nav">
+				<div class="nav-wrapper">
+					<div class="nav__header">
+						<div class="nav-info">
+							<div class="nav-lvl-info">
+								<h2 class="nav__title">
+									Level <span class="nav-cur-lvl">1</span> of <span class="nav-all-lvl">10</span>
+								</h2>
+								<div class="nav-check"></div>
+							</div>
+							<div class="nav__buttons">
+								<div class="nav-lvl-change">
+									<div class="nav-arrow arrow-left"></div>
+									<div class="nav-arrow arrow-right"></div>
+								</div>
+								<div class="nav-burger">
+									<span class="burger-line "></span>
+									<span class="burger-line "></span>
+									<span class="burger-line "></span>
+								</div>
+							</div>
+						</div>
+						<div class="nav-progress">
+							<div class="nav-progress-bar"></div>
+						</div>
+					</div>
+					<nav class="nav__header_menu">
+						<h2 class="nav__header_title">Choose a level</h2>
+						<ul class="header-nav__list">
+							<li class="header-nav__item current">
+								<span class="lvl-check"></span>
+								<span class="lvl-number">1</span>
+								<a href="#" class="header-nav__link">A</a>
+							</li>
+							<li class="header-nav__item">
+								<span class="lvl-check"></span>
+								<span class="lvl-number">2</span>
+								<a href="#" class="header-nav__link">A</a>
+							</li>
+							<li class="header-nav__item">
+								<span class="lvl-check"></span>
+								<span class="lvl-number">3</span>
+								<a href="#" class="header-nav__link">#id</a>
+							</li>
+							<li class="header-nav__item">
+								<span class="lvl-check"></span>
+								<span class="lvl-number">4</span>
+								<a href="#" class="header-nav__link">A B</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="nav-task">
+						<div class="nav-main-info">
+							<h3 class="nav__title">Type Selector</h3>
+							<h4 class="nav__subtitle">Select elements by their type</h4>
+						</div>
+						<div class="nav__id">
+							<div class="id">A</div>
+						</div>
+						<div class="nav-task-text">
+							Selects all elements of type <strong>A</strong>.
+							Type refers to the type of tag, so <code>&ltdiv&gt</code>, <code>&ltp&gt</code> and <code>&ltul&gt</code> are all different element types.
+						</div>
+						<div class="nav-task-examples">
+							<div class="nav-task_title">Examples</div>
+							<div class="nav-task-example">
+								<code>div</code> selects all <code>&ltdiv&gt</code> elements.
+							</div>
+						</div>
+					</div>
+				</div>
+			</aside>
+		</div>
+	</div>
+	<script src="js/app.min.js"></script>
+	<!-- <script async src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap"></script> -->
+</body>
+
+</html>

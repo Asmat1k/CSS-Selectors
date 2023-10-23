@@ -1,0 +1,208 @@
+.table plate, .game__logo plate {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border-bottom: solid 5px #DDD;
+  box-shadow: 0px 8px 0px rgba(0,0,0,.1);
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: calc(50% - 32px);
+    top: calc(50% - 32px);
+    height: 65px;
+    width: 65px;
+    border-radius: 60px;
+    border-top: solid 6px #CCC;
+    opacity: .4;
+    background: rgba(255,255,255,1);
+  }
+  .game-header .game__logo & {
+    opacity: .5;
+  }
+  &:hover {
+    box-shadow: 0 0 0 6px rgba(255,255,255,.4);
+  }
+}
+#fancy:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: calc(50% - 45px);
+  top: calc(50% - 45px);
+  height: 90px;
+  width: 90px;
+  border-radius: 60px;
+  border: solid 10px green;
+  opacity: .4;
+}
+
+.table .plate-hover {
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+.html-text .plate-hover {
+  color: gray;
+}
+
+.html-text plate  {
+  cursor: pointer;
+  &:hover {
+    color:gray;
+  }
+}
+
+
+.small {
+  transform: scale(0.5);
+}
+.medium {
+  transform: scale(0.7);
+}
+.big {
+  transform: scale(1.5);
+}
+
+
+.table lemon {
+  position: relative;
+  z-index: 3;
+  background: #fffb00;
+  border-color: #e6e211;
+  box-shadow: 0px 5px 0px rgba(0,0,0,.2);
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 3px 4px 5px 4px;
+  height: 45px;
+  width: 35px;
+  margin: 20px 10px;
+  &::after {
+    content: '';
+    position: absolute;
+    right: 50%;
+    top: -3px;
+
+    background: rgb(77, 37, 0);
+    border-radius: 100px;
+
+    height: 5px;
+    width: 5px;
+  }
+  &:hover {
+    box-shadow: 0 0 0 6px rgba(0,0,0,.2);
+  }
+}
+
+.table pumpkin {
+  position: relative;
+  z-index: 3;
+  background: #ffbb00;
+  border-color: #dba204;
+  box-shadow: 0px 5px 0px rgba(0,0,0,.2);
+  border-radius: 100px;
+  border-style: solid;
+  border-width: 4px 4px 8px 4px;
+  height: 70px;
+  width: 80px;
+  margin: 20px 10px;
+  &::after {
+    content: '';
+    position: absolute;
+    right: 50%;
+    top: -10px;
+
+    background: green;
+    border-radius: 20px 0;
+
+    height: 20px;
+    width: 5px;
+  }
+  &:hover {
+    box-shadow: 0 0 0 6px rgba(0,0,0,.2);
+  }
+}
+
+.table apple, .game__logo apple {
+  position: relative;
+  z-index: 3;
+  background: #e41919;
+  border-color: #ab1212;
+  box-shadow: 0px 5px 0px rgba(0,0,0,.2);
+  border-radius: 100px;
+  border-style: solid;
+  border-width: 2px 4px 15px 4px;
+  height: 60px;
+  width: 60px;
+  margin: 20px 10px;
+  &:hover {
+    box-shadow: 0 0 0 6px rgba(0,0,0,.2);
+  }
+}
+.game__logo apple {
+  position: absolute;
+}
+.table plate apple {
+  position: absolute;
+}
+.table plate pumpkin {
+  position: absolute;
+  top: -10px;
+}
+.table plate lemon {
+  position: absolute;
+  left: 22%;
+}
+
+plate apple {
+  top: calc(50% - 55px);
+  left: calc(50% - 40px);
+}
+
+.animated {
+  transform-origin: bottom;
+  animation: animatedStart .5s ease-out, animated 1s infinite;
+  animation-delay: 0s, .5s;
+}
+
+@keyframes animatedStart {
+  0% {
+    transform:  skew(0deg,0deg) scaleY(1) ;
+    animation-timing-function: ease-in;
+   }
+  40% {
+    transform:  skew(0deg,0deg) scaleY(.9);
+    animation-timing-function: ease-out;
+  }
+  100% { 
+    transform:   skew(4deg,0deg) scaleX(1); 
+  }
+}
+
+@keyframes animated {
+  0% { 
+    transform:   skew(4deg,0deg) scaleX(1); 
+  }
+  10% { 
+    transform:  skew(1deg,0deg) scaleY(.9) ; 
+  }
+  50% { 
+    transform:  skew(-4deg,0deg) scaleX(1); 
+  }
+  60% { 
+    transform:  skew(-1deg,0deg) scaleY(.9) ; 
+  }
+  100% {
+    transform: skew(4deg,0deg) scaleX(1); 
+  }
+}
+
+// Выбранный элемент
+.vanish {
+  opacity: 0;
+  transition: .9s;
+}
+

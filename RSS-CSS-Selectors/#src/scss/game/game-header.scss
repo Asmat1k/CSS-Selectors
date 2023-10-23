@@ -1,0 +1,46 @@
+.game__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 15px 11px 35px;
+  font-size: 16px;
+  .game__logo {
+    position: relative;
+    plate {
+      position: absolute;
+      top: -42px;
+      left: -65px;
+
+      opacity: 0.5;
+      transform: scale(0.2);
+    }
+  }
+  .game__share {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    .game__list {
+      display: flex;
+      column-gap: 5px;
+      .game__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: rgb(192, 192, 192);
+                
+        min-width: 24px;
+        min-height: 24px;
+        
+        transition: .5s;
+        .game__link {
+          &:hover {
+            color: white;
+            transition: .5s;
+          }
+        }
+      }
+    }
+  }
+}
